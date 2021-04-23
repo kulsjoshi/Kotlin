@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kuldeepjoshi.kotlintutorial">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.KotlinTutorial">
+        <activity android:name=".viewModelAndLiveData.GameMainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".navigationTutorial.activity.FragmentLetterActivity">
+
+        </activity>
+        <activity android:name=".lifecycle.LifeCycleTwoActivity" />
+        <activity android:name=".lifecycle.LifeCycleOneActivity" />
+        <activity android:name=".intentAndActivities.activity.LetterDetailsActivity" />
+        <activity android:name=".intentAndActivities.activity.LetterActivity"></activity>
+        <activity android:name=".recyclerView.RecyclerViewActivity" />
+        <activity android:name=".appTheme.AppThemeActivity" />
+        <activity android:name=".tipCalculator.TipCalculatorActivity" />
+        <activity android:name=".diceTutorial.DiceRollWithButtonActivity" />
+        <activity android:name=".diceTutorial.MainActivity" />
+    </application>
+
+</manifest>
