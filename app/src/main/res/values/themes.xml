@@ -2,8 +2,8 @@
     <!-- Base application theme. -->
     <style name="Theme.KotlinTutorial" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/green</item>
-        <item name="colorPrimaryVariant">@color/green_dark</item>
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorPrimaryVariant">@color/blue_dark</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/blue</item>
@@ -22,4 +22,13 @@
 
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="Theme.KotlinTutorial.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.KotlinTutorial.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.KotlinTutorial.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

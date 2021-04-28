@@ -9,20 +9,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.KotlinTutorial">
-        <activity android:name=".viewModelAndLiveData.GameMainActivity">
+        <activity
+            android:name=".cupCake.ui.CupCakeMainActivity"
+            android:label="@string/title_activity_cup_cake_main"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".navigationTutorial.activity.FragmentLetterActivity">
-
-        </activity>
+        <activity android:name=".viewModelAndLiveData.GameMainActivity" />
+        <activity android:name=".navigationTutorial.activity.FragmentLetterActivity" />
         <activity android:name=".lifecycle.LifeCycleTwoActivity" />
         <activity android:name=".lifecycle.LifeCycleOneActivity" />
         <activity android:name=".intentAndActivities.activity.LetterDetailsActivity" />
-        <activity android:name=".intentAndActivities.activity.LetterActivity"></activity>
+        <activity android:name=".intentAndActivities.activity.LetterActivity" />
         <activity android:name=".recyclerView.RecyclerViewActivity" />
         <activity android:name=".appTheme.AppThemeActivity" />
         <activity android:name=".tipCalculator.TipCalculatorActivity" />
