@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.kuldeepjoshi.kotlintutorial">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
@@ -10,21 +12,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.KotlinTutorial">
-        <activity
-            android:name=".dependencyInjection.DependencyInjectionActivity"
-            android:label="@string/title_activity_dependency_injection"
-            android:theme="@style/Theme.KotlinTutorial.NoActionBar">
-
-        </activity>
-        <activity
-            android:name=".cupCake.ui.CupCakeMainActivity"
-            android:label="@string/title_activity_cup_cake_main">
-
+        <activity android:name=".retrofit.ui.MarsActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".dependencyInjection.DependencyInjectionActivity"
+            android:label="@string/title_activity_dependency_injection"
+            android:theme="@style/Theme.KotlinTutorial.NoActionBar"></activity>
+        <activity
+            android:name=".cupCake.ui.CupCakeMainActivity"
+            android:label="@string/title_activity_cup_cake_main">
 
         </activity>
         <activity android:name=".viewModelAndLiveData.GameMainActivity" />
