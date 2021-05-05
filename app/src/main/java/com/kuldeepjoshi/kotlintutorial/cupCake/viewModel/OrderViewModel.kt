@@ -25,7 +25,7 @@ class OrderViewModel : ViewModel() {
     val date: LiveData<String> = _date
 
     private val _price = MutableLiveData<Double>()
-    val price: LiveData<String> = Transformations.map(_price){
+    val price: LiveData<String> = Transformations.map(_price) {
         NumberFormat.getCurrencyInstance().format(it)
     }
 
@@ -66,7 +66,7 @@ class OrderViewModel : ViewModel() {
         return options
     }
 
-    private fun resetOrder() {
+    fun resetOrder() {
         _quantity.value = 0
         _flavor.value = ""
         _date.value = dateOptions[0]

@@ -44,7 +44,7 @@
                 android:layout_marginTop="@dimen/margin_between_elements"
                 android:importantForAccessibility="no"
                 android:scaleType="center"
-                app:srcCompat="@drawable/image1" />
+                app:srcCompat="@drawable/cupcake" />
 
             <TextView
                 android:layout_width="wrap_content"

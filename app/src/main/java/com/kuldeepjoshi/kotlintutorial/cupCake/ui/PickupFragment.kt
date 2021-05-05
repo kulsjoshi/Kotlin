@@ -54,4 +54,9 @@ class PickupFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
     }
+
+    fun cancelOrder(){
+        sharedViewModel.resetOrder();
+        findNavController().navigate(R.id.action_pickupFragment_to_startFragment)
+    }
 }

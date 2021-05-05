@@ -1,13 +1,14 @@
 package com.kuldeepjoshi.kotlintutorial.cupCake.ui
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import com.kuldeepjoshi.kotlintutorial.R
 import com.kuldeepjoshi.kotlintutorial.cupCake.viewModel.OrderViewModel
 import com.kuldeepjoshi.kotlintutorial.databinding.FragmentSummaryBinding
@@ -46,7 +47,27 @@ class SummaryFragment : Fragment() {
      * Submit the order by sharing out the order details to another app via an implicit intent.
      */
     fun sendOrder() {
-        Toast.makeText(activity, "Sending.......", Toast.LENGTH_SHORT).show()
+
+        val numberOfCupCakes = sharedViewModel.quantity.value ?: 0
+
+        var orderSummary = getString(
+            R.string.order_details,
+            resources.getQuantityString(R.plurals.cupcakes, numberOfCupCakes, numberOfCupCakes),
+            sharedViewModel.flavor.value.toString(),
+            sharedViewModel.date.value.toString(),
+            sharedViewModel.price.value.toString()
+        )
+
+        Intent(Intent.ACTION_SEND).also {
+
+            it.type = "text/plain"
+            it.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.new_cupcake_order))
+            it.putExtra(Intent.EXTRA_TEXT, orderSummary)
+
+            if(activity?.packageManager?.resolveActivity(it,0) != null){
+                startActivity(it)
+            }
+        }
     }
 
     /**
@@ -55,5 +76,10 @@ class SummaryFragment : Fragment() {
      */
     override fun onDestroyView() {
         super.onDestroyView()
+    }
+
+    fun cancelOrder(){
+        sharedViewModel.resetOrder();
+        findNavController().navigate(R.id.action_summaryFragment_to_startFragment)
     }
 }

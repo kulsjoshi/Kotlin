@@ -14,15 +14,17 @@
             android:name=".dependencyInjection.DependencyInjectionActivity"
             android:label="@string/title_activity_dependency_injection"
             android:theme="@style/Theme.KotlinTutorial.NoActionBar">
+
+        </activity>
+        <activity
+            android:name=".cupCake.ui.CupCakeMainActivity"
+            android:label="@string/title_activity_cup_cake_main">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity
-            android:name=".cupCake.ui.CupCakeMainActivity"
-            android:label="@string/title_activity_cup_cake_main">
 
         </activity>
         <activity android:name=".viewModelAndLiveData.GameMainActivity" />
