@@ -8,6 +8,7 @@ buildscript {
         material_version = "1.2.1"
         nav_version = "2.3.5"
         koin_version="2.1.5"
+        work_version = "2.5.0"
     }
     repositories {
         google()

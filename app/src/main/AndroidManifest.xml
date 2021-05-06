@@ -3,6 +3,8 @@
     package="com.kuldeepjoshi.kotlintutorial">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:name=".MyApplication"
@@ -12,17 +14,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.KotlinTutorial">
-        <activity android:name=".retrofit.ui.MarsActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".retrofit.ui.MarsActivity" />
+
         <activity
             android:name=".dependencyInjection.DependencyInjectionActivity"
             android:label="@string/title_activity_dependency_injection"
-            android:theme="@style/Theme.KotlinTutorial.NoActionBar"></activity>
+            android:theme="@style/Theme.KotlinTutorial.NoActionBar" />
+
         <activity
             android:name=".cupCake.ui.CupCakeMainActivity"
             android:label="@string/title_activity_cup_cake_main">
@@ -39,6 +38,16 @@
         <activity android:name=".tipCalculator.TipCalculatorActivity" />
         <activity android:name=".diceTutorial.DiceRollWithButtonActivity" />
         <activity android:name=".diceTutorial.MainActivity" />
+
+        <activity android:name=".workManager.SelectImageActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".workManager.BlurActivity" />
+
     </application>
 
 </manifest>
