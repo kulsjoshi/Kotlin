@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.kuldeepjoshi.kotlintutorial.databinding.FragmentMarsOverviewBinding
 import com.kuldeepjoshi.kotlintutorial.retrofit.OverviewViewModel
+import com.kuldeepjoshi.kotlintutorial.retrofit.adapter.PhotoGridAdapter
 
 /**
  * A simple [Fragment] subclass.
@@ -23,6 +24,7 @@ class MarsOverviewFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         val binding = FragmentMarsOverviewBinding.inflate(inflater)
 
         //Allows DataBinding to Observe LiveData with the lifecycle of this fragment
@@ -30,6 +32,8 @@ class MarsOverviewFragment : Fragment() {
 
         //Giving the binding access to the OverviewViewModel
         binding.viewModel = viewModel
+
+        binding.photosGrid.adapter = PhotoGridAdapter()
 
         return binding.root
     }
