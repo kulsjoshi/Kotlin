@@ -110,4 +110,10 @@
     <string name="title_activity_dependency_injection">DependencyInjectionActivity</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <!--  Room database  -->
+    <string name="add_word">Add Word</string>
+    <string name="hint_word">Word...</string>
+    <string name="button_save">Save</string>
+    <string name="empty_not_saved">Word not saved because it is empty.</string>
+
 </resources>

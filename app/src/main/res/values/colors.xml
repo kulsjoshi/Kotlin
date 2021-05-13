@@ -28,4 +28,6 @@
     <color name="pink_600">#FFD81B60</color>
     <color name="pink_950">#FFB31650</color>
 
+    <color name="buttonLabel">#FFFFFF</color>
+
 </resources>
