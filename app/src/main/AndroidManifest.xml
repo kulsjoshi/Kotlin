@@ -14,7 +14,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.KotlinTutorial">
-        <activity android:name=".roomDatabase.ui.NewWordActivity"></activity>
+        <activity
+            android:name=".appSetting.SettingsActivity"
+            android:label="Settings"
+            android:parentActivityName=".appSetting.AppSettingActivity">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".appSetting.AppSettingActivity" />
+
+        </activity>
+        <activity
+            android:name=".appSetting.AppSettingActivity"
+            android:label="@string/title_activity_app_setting"
+            android:theme="@style/Theme.KotlinTutorial.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".roomDatabase.ui.NewWordActivity" />
         <activity android:name=".roomDatabase.ui.RoomActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -29,9 +49,7 @@
             android:theme="@style/Theme.KotlinTutorial.NoActionBar" />
         <activity
             android:name=".cupCake.ui.CupCakeMainActivity"
-            android:label="@string/title_activity_cup_cake_main">
-
-        </activity>
+            android:label="@string/title_activity_cup_cake_main" />
         <activity android:name=".viewModelAndLiveData.GameMainActivity" />
         <activity android:name=".navigationTutorial.activity.FragmentLetterActivity" />
         <activity android:name=".lifecycle.LifeCycleTwoActivity" />

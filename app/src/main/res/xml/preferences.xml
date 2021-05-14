@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <SwitchPreferenceCompat
+        android:defaultValue="true"
+        android:hapticFeedbackEnabled="false"
+        android:key="setting_switch_preference"
+        android:summary="This is summery of the switch option"
+        android:title="Settings Option"
+        app:icon="@drawable/ic_setting"
+        app:iconSpaceReserved="false" />
+
+</PreferenceScreen>
